@@ -34,7 +34,13 @@ npm test
 npm run build
 ```
 
-Releases are published to npm with provenance by `.github/workflows/publish.yml` when a version tag is pushed.
+## Releasing
+
+No npm token is stored anywhere. Publishing uses npm trusted publishing (OIDC) with provenance.
+
+1. First publish, done manually by the owner (security key required): `RELEASE_MODE=true npm publish --access public`.
+2. On npmjs.com, add a Trusted Publisher for the package: GitHub Actions, organization `TheHiddenPandaDev`, repository `n8n-nodes-agro-gps`, workflow `publish.yml`, environment empty.
+3. From then on, pushing a version tag (`x.y.z`) runs `.github/workflows/publish.yml`, which stages the version with provenance. The owner approves it on npmjs.com under Staged Packages.
 
 ## License
 
