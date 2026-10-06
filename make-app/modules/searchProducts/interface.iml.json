@@ -1,0 +1,27 @@
+[
+    {
+        "name": "registration_number",
+        "type": "text",
+        "label": "Registration number"
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+    },
+    {
+        "name": "holder",
+        "type": "text",
+        "label": "Holder"
+    },
+    {
+        "name": "register_country",
+        "type": "text",
+        "label": "Register country"
+    },
+    {
+        "name": "authorisation",
+        "type": "collection",
+        "label": "Authorisation"
+    }
+]

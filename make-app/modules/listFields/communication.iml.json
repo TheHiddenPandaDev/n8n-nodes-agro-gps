@@ -1,0 +1,31 @@
+{
+    "url": "/api/v1/sync/records",
+    "method": "GET",
+    "qs": {
+        "farm_id": "{{parameters.farmId}}",
+        "since": 0
+    },
+    "response": {
+        "iterate": {
+            "container": "{{body.data.records}}",
+            "condition": "{{item.kind == 'parcel' && !item.deleted}}"
+        },
+        "output": {
+            "id": "{{item.id}}",
+            "farmId": "{{body.data.farm_id}}",
+            "name": "{{ifempty(item.payload.name, item.id)}}",
+            "reference": "{{item.payload.refcat}}",
+            "cropCode": "{{item.payload.crop_code}}",
+            "country": "{{item.payload.country}}",
+            "surfaceHa": "{{item.payload.surface_ha}}",
+            "polygon": "{{item.payload.polygon}}"
+        },
+        "limit": "{{parameters.limit}}"
+    },
+    "pagination": {
+        "qs": {
+            "since": "{{body.data.next}}"
+        },
+        "condition": "{{body.data.has_more}}"
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "events",
+        "type": "select",
+        "label": "Events",
+        "multiple": true,
+        "default": [
+            "entry.pushed",
+            "entry.reviewed"
+        ],
+        "options": [
+            {
+                "label": "Operation registered",
+                "value": "entry.pushed"
+            },
+            {
+                "label": "Operation reviewed by an advisor",
+                "value": "entry.reviewed"
+            }
+        ]
+    }
+]

@@ -1,0 +1,37 @@
+{
+    "baseUrl": "https://api.agrogps.eu",
+    "headers": {
+        "X-API-Key": "{{connection.apiKey}}",
+        "Accept": "application/json"
+    },
+    "response": {
+        "error": {
+            "message": "[{{statusCode}}] {{ifempty(body.message, \"Unexpected error\")}}",
+            "401": {
+                "message": "Invalid or missing API key. Check the Agro GPS connection. [{{body.code}}] {{body.message}}",
+                "type": "InvalidAccessTokenError"
+            },
+            "403": {
+                "message": "Not allowed: a read-only key, a key that cannot do this, or a read-only role on the farm. [{{body.code}}] {{body.message}}",
+                "type": "InvalidConfigurationError"
+            },
+            "404": {
+                "message": "Not found. [{{body.code}}] {{body.message}}",
+                "type": "DataError"
+            },
+            "400": {
+                "message": "[{{body.code}}] {{body.message}}",
+                "type": "DataError"
+            },
+            "429": {
+                "message": "[{{body.code}}] {{ifempty(body.message, \"Too many requests\")}}",
+                "type": "RateLimitError"
+            }
+        }
+    },
+    "log": {
+        "sanitize": [
+            "request.headers.x-api-key"
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "url": "/api/public/phyto",
+    "method": "GET",
+    "qs": {
+        "q": "{{parameters.name}}",
+        "country": "{{parameters.country}}"
+    },
+    "response": {
+        "iterate": "{{body.data.matches}}",
+        "output": "{{item}}",
+        "limit": "{{parameters.limit}}"
+    }
+}

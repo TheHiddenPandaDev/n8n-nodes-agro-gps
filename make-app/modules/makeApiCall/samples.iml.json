@@ -1,0 +1,13 @@
+{
+    "statusCode": 200,
+    "headers": {},
+    "body": {
+        "success": true,
+        "data": [
+            {
+                "id": "5b0c7a52-6f4e-4d1d-9a4b-0b3f2c1d9e8f",
+                "name": "Finca Los Llanos"
+            }
+        ]
+    }
+}

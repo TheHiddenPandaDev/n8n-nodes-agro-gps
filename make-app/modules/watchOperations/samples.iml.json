@@ -1,0 +1,15 @@
+{
+    "event": "entry.pushed",
+    "farm_id": "5b0c7a52-6f4e-4d1d-9a4b-0b3f2c1d9e8f",
+    "occurred_at": "2026-10-06T10:00:00Z",
+    "data": {
+        "accepted": 1,
+        "by_user_id": "u-1",
+        "results": [
+            {
+                "id": "0f8fad5b-d9cb-469f-a165-70867728950e",
+                "result": "accepted"
+            }
+        ]
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "url": "/api/v1/farms",
+    "method": "GET",
+    "response": {
+        "iterate": "{{body.data}}",
+        "output": "{{item}}",
+        "limit": "{{parameters.limit}}"
+    }
+}

@@ -1,0 +1,267 @@
+[
+    {
+        "name": "farmId",
+        "type": "text",
+        "label": "Farm ID",
+        "help": "Farm UUID from **List Farms**. Leave empty for your default farm."
+    },
+    {
+        "name": "fieldReference",
+        "type": "text",
+        "label": "Field reference",
+        "required": true,
+        "help": "Cadastral or agricultural reference of the field, or the ID from **List Fields**."
+    },
+    {
+        "name": "type",
+        "type": "select",
+        "label": "Type",
+        "required": true,
+        "default": "treatment",
+        "options": [
+            {
+                "label": "Cover crop",
+                "value": "cover_crop"
+            },
+            {
+                "label": "Cultural work",
+                "value": "cultural_work"
+            },
+            {
+                "label": "Energy use",
+                "value": "energy"
+            },
+            {
+                "label": "Expense",
+                "value": "expense"
+            },
+            {
+                "label": "Fertilization plan",
+                "value": "fertilization_plan"
+            },
+            {
+                "label": "Fertilizing",
+                "value": "fertilizing"
+            },
+            {
+                "label": "Grazing",
+                "value": "grazing"
+            },
+            {
+                "label": "Harvest",
+                "value": "harvest"
+            },
+            {
+                "label": "Irrigation",
+                "value": "irrigation"
+            },
+            {
+                "label": "Observation",
+                "value": "observation"
+            },
+            {
+                "label": "Plant protection treatment",
+                "value": "treatment"
+            },
+            {
+                "label": "Post-harvest treatment",
+                "value": "postharvest"
+            },
+            {
+                "label": "Sale",
+                "value": "sale"
+            },
+            {
+                "label": "Seed treatment",
+                "value": "seed_treatment"
+            },
+            {
+                "label": "Soil or leaf analysis",
+                "value": "analysis"
+            },
+            {
+                "label": "Sowing or planting",
+                "value": "planting"
+            }
+        ]
+    },
+    {
+        "name": "title",
+        "type": "text",
+        "label": "Title",
+        "required": true
+    },
+    {
+        "name": "date",
+        "type": "date",
+        "label": "Date",
+        "required": true,
+        "help": "When the operation was done. Future dates are rejected."
+    },
+    {
+        "name": "country",
+        "type": "select",
+        "label": "Country",
+        "default": "ES",
+        "options": [
+            {
+                "label": "Austria (AT)",
+                "value": "AT"
+            },
+            {
+                "label": "Belgium (BE)",
+                "value": "BE"
+            },
+            {
+                "label": "Bulgaria (BG)",
+                "value": "BG"
+            },
+            {
+                "label": "Croatia (HR)",
+                "value": "HR"
+            },
+            {
+                "label": "Cyprus (CY)",
+                "value": "CY"
+            },
+            {
+                "label": "Czechia (CZ)",
+                "value": "CZ"
+            },
+            {
+                "label": "Denmark (DK)",
+                "value": "DK"
+            },
+            {
+                "label": "Estonia (EE)",
+                "value": "EE"
+            },
+            {
+                "label": "Finland (FI)",
+                "value": "FI"
+            },
+            {
+                "label": "France (FR)",
+                "value": "FR"
+            },
+            {
+                "label": "Germany (DE)",
+                "value": "DE"
+            },
+            {
+                "label": "Greece (GR)",
+                "value": "GR"
+            },
+            {
+                "label": "Hungary (HU)",
+                "value": "HU"
+            },
+            {
+                "label": "Iceland (IS)",
+                "value": "IS"
+            },
+            {
+                "label": "Ireland (IE)",
+                "value": "IE"
+            },
+            {
+                "label": "Italy (IT)",
+                "value": "IT"
+            },
+            {
+                "label": "Latvia (LV)",
+                "value": "LV"
+            },
+            {
+                "label": "Liechtenstein (LI)",
+                "value": "LI"
+            },
+            {
+                "label": "Lithuania (LT)",
+                "value": "LT"
+            },
+            {
+                "label": "Luxembourg (LU)",
+                "value": "LU"
+            },
+            {
+                "label": "Malta (MT)",
+                "value": "MT"
+            },
+            {
+                "label": "Netherlands (NL)",
+                "value": "NL"
+            },
+            {
+                "label": "Norway (NO)",
+                "value": "NO"
+            },
+            {
+                "label": "Poland (PL)",
+                "value": "PL"
+            },
+            {
+                "label": "Portugal (PT)",
+                "value": "PT"
+            },
+            {
+                "label": "Romania (RO)",
+                "value": "RO"
+            },
+            {
+                "label": "Slovakia (SK)",
+                "value": "SK"
+            },
+            {
+                "label": "Slovenia (SI)",
+                "value": "SI"
+            },
+            {
+                "label": "Spain (ES)",
+                "value": "ES"
+            },
+            {
+                "label": "Sweden (SE)",
+                "value": "SE"
+            },
+            {
+                "label": "Switzerland (CH)",
+                "value": "CH"
+            },
+            {
+                "label": "United Kingdom (GB)",
+                "value": "GB"
+            }
+        ],
+        "help": "Country of the farm, used when a default farm has to be created."
+    },
+    {
+        "name": "quantity",
+        "type": "number",
+        "label": "Quantity",
+        "help": "Dose or amount, e.g. litres per hectare for a treatment."
+    },
+    {
+        "name": "unit",
+        "type": "text",
+        "label": "Unit"
+    },
+    {
+        "name": "registrationNumber",
+        "type": "text",
+        "label": "Product registration number",
+        "help": "For treatments."
+    },
+    {
+        "name": "safetyDays",
+        "type": "uinteger",
+        "label": "Safety days",
+        "help": "Pre-harvest interval, for treatments."
+    },
+    {
+        "name": "operationId",
+        "type": "text",
+        "label": "Operation ID",
+        "help": "Optional UUID. Reuse it to avoid duplicates when a scenario runs twice; leave empty to generate one."
+    }
+]

@@ -1,0 +1,152 @@
+[
+    {
+        "name": "registrationNumber",
+        "type": "text",
+        "label": "Registration number",
+        "required": true,
+        "help": "Official registration or authorisation number, e.g. `25421`."
+    },
+    {
+        "name": "country",
+        "type": "select",
+        "label": "Country",
+        "default": "ES",
+        "required": true,
+        "options": [
+            {
+                "label": "Austria (AT)",
+                "value": "AT"
+            },
+            {
+                "label": "Belgium (BE)",
+                "value": "BE"
+            },
+            {
+                "label": "Bulgaria (BG)",
+                "value": "BG"
+            },
+            {
+                "label": "Croatia (HR)",
+                "value": "HR"
+            },
+            {
+                "label": "Cyprus (CY)",
+                "value": "CY"
+            },
+            {
+                "label": "Czechia (CZ)",
+                "value": "CZ"
+            },
+            {
+                "label": "Denmark (DK)",
+                "value": "DK"
+            },
+            {
+                "label": "Estonia (EE)",
+                "value": "EE"
+            },
+            {
+                "label": "Finland (FI)",
+                "value": "FI"
+            },
+            {
+                "label": "France (FR)",
+                "value": "FR"
+            },
+            {
+                "label": "Germany (DE)",
+                "value": "DE"
+            },
+            {
+                "label": "Greece (GR)",
+                "value": "GR"
+            },
+            {
+                "label": "Hungary (HU)",
+                "value": "HU"
+            },
+            {
+                "label": "Iceland (IS)",
+                "value": "IS"
+            },
+            {
+                "label": "Ireland (IE)",
+                "value": "IE"
+            },
+            {
+                "label": "Italy (IT)",
+                "value": "IT"
+            },
+            {
+                "label": "Latvia (LV)",
+                "value": "LV"
+            },
+            {
+                "label": "Liechtenstein (LI)",
+                "value": "LI"
+            },
+            {
+                "label": "Lithuania (LT)",
+                "value": "LT"
+            },
+            {
+                "label": "Luxembourg (LU)",
+                "value": "LU"
+            },
+            {
+                "label": "Malta (MT)",
+                "value": "MT"
+            },
+            {
+                "label": "Netherlands (NL)",
+                "value": "NL"
+            },
+            {
+                "label": "Norway (NO)",
+                "value": "NO"
+            },
+            {
+                "label": "Poland (PL)",
+                "value": "PL"
+            },
+            {
+                "label": "Portugal (PT)",
+                "value": "PT"
+            },
+            {
+                "label": "Romania (RO)",
+                "value": "RO"
+            },
+            {
+                "label": "Slovakia (SK)",
+                "value": "SK"
+            },
+            {
+                "label": "Slovenia (SI)",
+                "value": "SI"
+            },
+            {
+                "label": "Spain (ES)",
+                "value": "ES"
+            },
+            {
+                "label": "Sweden (SE)",
+                "value": "SE"
+            },
+            {
+                "label": "Switzerland (CH)",
+                "value": "CH"
+            },
+            {
+                "label": "United Kingdom (GB)",
+                "value": "GB"
+            }
+        ]
+    },
+    {
+        "name": "cropCode",
+        "type": "text",
+        "label": "Crop (EPPO code)",
+        "help": "Optional, e.g. `TRZAW`, to keep only the uses for that crop."
+    }
+]

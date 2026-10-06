@@ -1,0 +1,35 @@
+{
+    "url": "/api/v1/sync/entries",
+    "method": "POST",
+    "body": {
+        "farm_id": "{{ifempty(parameters.farmId, undefined)}}",
+        "country": "{{parameters.country}}",
+        "entries": [
+            {
+                "id": "{{ifempty(parameters.operationId, uuid)}}",
+                "parcel_refcat": "{{parameters.fieldReference}}",
+                "entry_type": "{{parameters.type}}",
+                "title": "{{parameters.title}}",
+                "event_at": "{{formatDate(parameters.date, 'YYYY-MM-DDTHH:mm:ss[Z]', 'UTC')}}",
+                "quantity": "{{ifempty(parameters.quantity, 0)}}",
+                "unit": "{{parameters.unit}}",
+                "registration_number": "{{parameters.registrationNumber}}",
+                "safety_days": "{{ifempty(parameters.safetyDays, 0)}}",
+                "version": 1,
+                "client_created_at": "{{formatDate(now, 'YYYY-MM-DDTHH:mm:ss[Z]', 'UTC')}}"
+            }
+        ]
+    },
+    "response": {
+        "valid": {
+            "condition": "{{get(first(body.data.results), 'result') != 'rejected'}}",
+            "message": "Agro GPS rejected the operation: check the type and that the date is not in the future.",
+            "type": "DataError"
+        },
+        "output": {
+            "farmId": "{{body.data.farm_id}}",
+            "id": "{{get(first(body.data.results), 'id')}}",
+            "result": "{{get(first(body.data.results), 'result')}}"
+        }
+    }
+}

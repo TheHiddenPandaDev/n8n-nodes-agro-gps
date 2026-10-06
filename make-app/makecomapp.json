@@ -1,0 +1,146 @@
+{
+    "fileVersion": 1,
+    "generalCodeFiles": {
+        "base": "general/base.iml.json",
+        "common": "general/common.json",
+        "readme": "README.md",
+        "groups": "general/groups.json"
+    },
+    "components": {
+        "connection": {
+            "agroGps": {
+                "label": "Agro GPS",
+                "connectionType": "basic",
+                "codeFiles": {
+                    "communication": "connections/agroGps/communication.iml.json",
+                    "common": "connections/agroGps/common.json",
+                    "params": "connections/agroGps/params.iml.json"
+                }
+            }
+        },
+        "webhook": {
+            "agroGpsEvents": {
+                "label": "Agro GPS events",
+                "webhookType": "dedicated-attached",
+                "connection": "agroGps",
+                "codeFiles": {
+                    "communication": "webhooks/agroGpsEvents/communication.iml.json",
+                    "params": "webhooks/agroGpsEvents/params.iml.json",
+                    "attach": "webhooks/agroGpsEvents/attach.iml.json",
+                    "detach": "webhooks/agroGpsEvents/detach.iml.json"
+                }
+            }
+        },
+        "module": {
+            "watchOperations": {
+                "label": "Watch Operations",
+                "description": "Triggers when operations are registered or reviewed in an Agro GPS farm diary (needs a write key).",
+                "moduleType": "instant_trigger",
+                "connection": "agroGps",
+                "codeFiles": {
+                    "communication": "modules/watchOperations/communication.iml.json",
+                    "staticParams": "modules/watchOperations/static-params.iml.json",
+                    "mappableParams": "modules/watchOperations/mappable-params.iml.json",
+                    "interface": "modules/watchOperations/interface.iml.json",
+                    "samples": "modules/watchOperations/samples.iml.json"
+                },
+                "webhook": "agroGpsEvents"
+            },
+            "registerOperation": {
+                "label": "Register an Operation",
+                "description": "Registers a farm operation such as a treatment, fertilizing or harvest in the farm diary (needs a write key).",
+                "moduleType": "action",
+                "connection": "agroGps",
+                "codeFiles": {
+                    "communication": "modules/registerOperation/communication.iml.json",
+                    "staticParams": "modules/registerOperation/static-params.iml.json",
+                    "mappableParams": "modules/registerOperation/mappable-params.iml.json",
+                    "interface": "modules/registerOperation/interface.iml.json",
+                    "samples": "modules/registerOperation/samples.iml.json"
+                }
+            },
+            "listFields": {
+                "label": "List Fields",
+                "description": "Lists the fields of a farm with crop, surface and, optionally, the outline.",
+                "moduleType": "search",
+                "connection": "agroGps",
+                "codeFiles": {
+                    "communication": "modules/listFields/communication.iml.json",
+                    "staticParams": "modules/listFields/static-params.iml.json",
+                    "mappableParams": "modules/listFields/mappable-params.iml.json",
+                    "interface": "modules/listFields/interface.iml.json",
+                    "samples": "modules/listFields/samples.iml.json"
+                }
+            },
+            "createField": {
+                "label": "Create a Field",
+                "description": "Creates a field in the farm diary from an outline (needs a write key).",
+                "moduleType": "action",
+                "connection": "agroGps",
+                "codeFiles": {
+                    "communication": "modules/createField/communication.iml.json",
+                    "staticParams": "modules/createField/static-params.iml.json",
+                    "mappableParams": "modules/createField/mappable-params.iml.json",
+                    "interface": "modules/createField/interface.iml.json",
+                    "samples": "modules/createField/samples.iml.json"
+                }
+            },
+            "listFarms": {
+                "label": "List Farms",
+                "description": "Lists the farms the API key can access.",
+                "moduleType": "search",
+                "connection": "agroGps",
+                "codeFiles": {
+                    "communication": "modules/listFarms/communication.iml.json",
+                    "staticParams": "modules/listFarms/static-params.iml.json",
+                    "mappableParams": "modules/listFarms/mappable-params.iml.json",
+                    "interface": "modules/listFarms/interface.iml.json",
+                    "samples": "modules/listFarms/samples.iml.json"
+                }
+            },
+            "getProduct": {
+                "label": "Get a Plant Protection Product",
+                "description": "Gets a product by registration number from 30 official European registers, with its authorised uses and conditions of use.",
+                "moduleType": "action",
+                "connection": "agroGps",
+                "codeFiles": {
+                    "communication": "modules/getProduct/communication.iml.json",
+                    "staticParams": "modules/getProduct/static-params.iml.json",
+                    "mappableParams": "modules/getProduct/mappable-params.iml.json",
+                    "interface": "modules/getProduct/interface.iml.json",
+                    "samples": "modules/getProduct/samples.iml.json"
+                }
+            },
+            "searchProducts": {
+                "label": "Search Plant Protection Products",
+                "description": "Searches products by name in a country register.",
+                "moduleType": "search",
+                "connection": "agroGps",
+                "codeFiles": {
+                    "communication": "modules/searchProducts/communication.iml.json",
+                    "staticParams": "modules/searchProducts/static-params.iml.json",
+                    "mappableParams": "modules/searchProducts/mappable-params.iml.json",
+                    "interface": "modules/searchProducts/interface.iml.json",
+                    "samples": "modules/searchProducts/samples.iml.json"
+                }
+            },
+            "makeApiCall": {
+                "label": "Make an API Call",
+                "description": "Performs an arbitrary authorized API call.",
+                "moduleType": "universal",
+                "connection": "agroGps",
+                "codeFiles": {
+                    "communication": "modules/makeApiCall/communication.iml.json",
+                    "staticParams": "modules/makeApiCall/static-params.iml.json",
+                    "mappableParams": "modules/makeApiCall/mappable-params.iml.json",
+                    "interface": "modules/makeApiCall/interface.iml.json",
+                    "samples": "modules/makeApiCall/samples.iml.json"
+                }
+            }
+        },
+        "rpc": {},
+        "function": {},
+        "endpoint": {}
+    },
+    "origins": []
+}

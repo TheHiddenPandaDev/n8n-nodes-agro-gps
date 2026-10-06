@@ -1,0 +1,14 @@
+[
+    {
+        "name": "farmId",
+        "type": "text",
+        "label": "Farm ID",
+        "help": "Farm UUID from **List Farms**. Leave empty for your default farm."
+    },
+    {
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "default": 500
+    }
+]

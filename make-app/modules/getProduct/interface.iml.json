@@ -1,0 +1,111 @@
+[
+    {
+        "name": "registration_number",
+        "type": "text",
+        "label": "Registration number"
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+    },
+    {
+        "name": "holder",
+        "type": "text",
+        "label": "Holder"
+    },
+    {
+        "name": "status",
+        "type": "text",
+        "label": "Status"
+    },
+    {
+        "name": "formulation",
+        "type": "text",
+        "label": "Formulation"
+    },
+    {
+        "name": "expires_on",
+        "type": "date",
+        "label": "Expires on"
+    },
+    {
+        "name": "register_country",
+        "type": "text",
+        "label": "Register country"
+    },
+    {
+        "name": "substances",
+        "type": "array",
+        "label": "Active substances",
+        "spec": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            },
+            {
+                "name": "concentration",
+                "type": "text",
+                "label": "Concentration"
+            }
+        ]
+    },
+    {
+        "name": "uses",
+        "type": "array",
+        "label": "Authorised uses",
+        "spec": [
+            {
+                "name": "crop",
+                "type": "text",
+                "label": "Crop"
+            },
+            {
+                "name": "crop_code",
+                "type": "text",
+                "label": "Crop code"
+            },
+            {
+                "name": "target",
+                "type": "text",
+                "label": "Target"
+            },
+            {
+                "name": "dose_min",
+                "type": "number",
+                "label": "Minimum dose"
+            },
+            {
+                "name": "dose_max",
+                "type": "number",
+                "label": "Maximum dose"
+            },
+            {
+                "name": "dose_unit",
+                "type": "text",
+                "label": "Dose unit"
+            },
+            {
+                "name": "safety_days",
+                "type": "number",
+                "label": "Safety days"
+            },
+            {
+                "name": "max_applications",
+                "type": "number",
+                "label": "Maximum applications"
+            },
+            {
+                "name": "min_interval_days",
+                "type": "number",
+                "label": "Minimum interval (days)"
+            },
+            {
+                "name": "conditions",
+                "type": "text",
+                "label": "Conditions of use"
+            }
+        ]
+    }
+]

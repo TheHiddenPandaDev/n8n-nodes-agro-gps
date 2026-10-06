@@ -1,0 +1,51 @@
+[
+    {
+        "name": "event",
+        "type": "text",
+        "label": "Event"
+    },
+    {
+        "name": "farm_id",
+        "type": "text",
+        "label": "Farm ID"
+    },
+    {
+        "name": "occurred_at",
+        "type": "date",
+        "label": "Occurred at"
+    },
+    {
+        "name": "data",
+        "type": "collection",
+        "label": "Data",
+        "spec": [
+            {
+                "name": "accepted",
+                "type": "number",
+                "label": "Accepted operations"
+            },
+            {
+                "name": "by_user_id",
+                "type": "text",
+                "label": "By user"
+            },
+            {
+                "name": "results",
+                "type": "array",
+                "label": "Results",
+                "spec": [
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "Operation ID"
+                    },
+                    {
+                        "name": "result",
+                        "type": "text",
+                        "label": "Result"
+                    }
+                ]
+            }
+        ]
+    }
+]

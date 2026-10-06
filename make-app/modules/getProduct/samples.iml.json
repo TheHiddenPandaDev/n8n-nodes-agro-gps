@@ -1,0 +1,17 @@
+{
+    "registration_number": "25421",
+    "name": "SHERPA 100 EW",
+    "holder": "SBM DÉVELOPPEMENT SAS",
+    "status": "Vigente",
+    "register_country": "ES",
+    "uses": [
+        {
+            "crop": "Algodonero",
+            "target": "Pulgones",
+            "dose_min": 0.3,
+            "dose_unit": "l/ha",
+            "safety_days": 14,
+            "conditions": "Masas de agua superficial: banda de seguridad mínima de 10 m (SPe 3)"
+        }
+    ]
+}

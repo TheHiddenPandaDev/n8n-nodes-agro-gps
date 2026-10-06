@@ -1,0 +1,17 @@
+[
+    {
+        "name": "farmId",
+        "type": "text",
+        "label": "Farm ID"
+    },
+    {
+        "name": "id",
+        "type": "text",
+        "label": "Operation ID"
+    },
+    {
+        "name": "result",
+        "type": "text",
+        "label": "Result (accepted, duplicate, stale)"
+    }
+]

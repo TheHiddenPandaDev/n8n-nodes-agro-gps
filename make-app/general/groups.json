@@ -1,0 +1,25 @@
+[
+    {
+        "label": "Farm diary",
+        "modules": [
+            "watchOperations",
+            "registerOperation",
+            "listFields",
+            "createField",
+            "listFarms"
+        ]
+    },
+    {
+        "label": "Plant protection products",
+        "modules": [
+            "getProduct",
+            "searchProducts"
+        ]
+    },
+    {
+        "label": "Other",
+        "modules": [
+            "makeApiCall"
+        ]
+    }
+]

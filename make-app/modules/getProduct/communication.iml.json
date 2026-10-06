@@ -1,0 +1,11 @@
+{
+    "url": "/api/public/phyto/{{encodeURL(parameters.registrationNumber)}}",
+    "method": "GET",
+    "qs": {
+        "country": "{{parameters.country}}",
+        "crop": "{{upper(parameters.cropCode)}}"
+    },
+    "response": {
+        "output": "{{body.data}}"
+    }
+}

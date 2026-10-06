@@ -1,0 +1,10 @@
+[
+    {
+        "name": "apiKey",
+        "type": "password",
+        "label": "API Key",
+        "required": true,
+        "editable": true,
+        "help": "Agro GPS key starting with `agk_`. Create it in the Agro GPS app under **Settings > API and webhooks**. A read key lists data; a write key can also register operations, create fields and receive instant triggers."
+    }
+]

@@ -1,0 +1,18 @@
+{
+    "url": "/api/v1/fields",
+    "method": "POST",
+    "body": {
+        "farm_id": "{{ifempty(parameters.farmId, undefined)}}",
+        "fields": [
+            {
+                "name": "{{parameters.name}}",
+                "country": "{{parameters.country}}",
+                "crop_code": "{{upper(parameters.cropCode)}}",
+                "polygon": "{{parameters.polygon}}"
+            }
+        ]
+    },
+    "response": {
+        "output": "{{merge(first(body.data.fields); {\"farmId\": body.data.farm_id})}}"
+    }
+}
